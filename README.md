@@ -3,7 +3,7 @@
 * ```git clone <username>/clevertec-test-task.git ```
 * go to the folder ```cd 'your project folder'```
 * paste project url from the first step
-*go to the folder with project ```cd ./clevertec-test-task```
+* go to the folder with project ```cd ./clevertec-test-task```
 
 ### __For start application with default parameters:__
  __In the root project folder paste:__
