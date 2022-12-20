@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  test-task:
+    build: ./
+    restart: on-failure
+    command: 1-3 2-5 3-6 1-6 4-1 8-2 8-4 7-5 5-4 3-4 1-4 5
