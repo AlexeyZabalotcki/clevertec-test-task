@@ -7,8 +7,13 @@
 
 ### __For start application with default parameters:__
  __In the root project folder paste:__
- * for starting tests: ```gradle test``` 
+ * for starting tests: ```gradle build test``` 
  * for starting application: ```docker compose up```
+ 
+ ___If you want to run___ ```docker compose up``` ___at first you should enter___:
+ * ```gradle build```  
+ * ___after that:___ ```docker compose up```
+ * ___for tests:___ ```gradle test```
 
 ### __For start application with your own parameters:__
 You should edit entering arguments in ```docker-compose.yml``` file
