@@ -196,15 +196,16 @@ class FileCheckTest {
         }
 
         long actual = 0;
+        long expected = -1;
         try {
             actual = Files.mismatch(file.toPath(), file1.toPath());
+            assertEquals(expected, actual);
         } catch (IOException e) {
             e.getMessage();
+        }finally {
+            file.deleteOnExit();
+            file1.deleteOnExit();
         }
-        long expected = -1;
 
-        assertEquals(expected, actual);
-        file.deleteOnExit();
-        file1.deleteOnExit();
     }
 }

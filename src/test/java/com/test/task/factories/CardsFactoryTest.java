@@ -33,38 +33,14 @@ class CardsFactoryTest {
 
     @Test
     public void testShouldReturnTrueAfterCheckingMapSizes() {
-        //1. check map size
         int mapSize = cardsMap.size();
-        //2. equals map sizes
         assertEquals(4, mapSize);
     }
 
     @Test
     public void testShouldReturnFalseAfterCheckingMapSizes() {
-        //1. check map size
         int mapSize = cardsMap.size();
-        //2. equals map sizes
         assertNotEquals(6, mapSize);
-    }
-
-    @Test
-    public void testShouldReturnTrueIfFileExists() throws IOException {
-        // 1. Create file
-        File firstFile = new File("src/test/resources/ITEMS.txt");
-        // 2. Write inf from map to the file
-        try (BufferedWriter bf = new BufferedWriter(new FileWriter(firstFile))) {
-            for (Map.Entry<Integer, Card> entry : cardsMap.entrySet()) {
-                bf.write(entry.getKey() + " : " + entry.getValue());
-                bf.newLine();
-            }
-            bf.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        // 3. Check if file exists
-        File file = new File("src/test/resources/ITEMS.txt");
-        assertTrue(file.exists());
-        file.deleteOnExit();
     }
 
 }
